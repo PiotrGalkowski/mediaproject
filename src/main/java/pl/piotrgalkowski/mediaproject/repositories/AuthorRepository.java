@@ -1,7 +1,7 @@
-package guru.springframework.spring5webapp.repositories;
+package pl.piotrgalkowski.mediaproject.repositories;
 
-import guru.springframework.spring5webapp.model.Author;
 import org.springframework.data.repository.CrudRepository;
+import pl.piotrgalkowski.mediaproject.models.Author;
 
 /**
  * Created by jt on 5/16/17.

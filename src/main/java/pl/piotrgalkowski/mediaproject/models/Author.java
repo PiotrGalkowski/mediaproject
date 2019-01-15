@@ -1,4 +1,4 @@
-package pl.piotrgalkowski.mediaproject.model;
+package pl.piotrgalkowski.mediaproject.models;
 
 import javax.persistence.*;
 import java.util.HashSet;

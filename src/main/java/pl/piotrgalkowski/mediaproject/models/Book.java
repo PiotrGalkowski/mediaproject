@@ -1,4 +1,4 @@
-package pl.piotrgalkowski.mediaproject.model;
+package pl.piotrgalkowski.mediaproject.models;
 
 import javax.persistence.*;
 import java.util.HashSet;
@@ -12,7 +12,9 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
-    private String publisher;
+
+    @OneToOne
+    private Publisher publisher;
 
     @ManyToMany
     @JoinTable(name = "author_book",
@@ -23,12 +25,12 @@ public class Book {
     public Book() {
     }
 
-    public Book(String title, String publisher) {
+    public Book(String title, Publisher publisher) {
         this.title = title;
         this.publisher = publisher;
     }
 
-    public Book(String title, String publisher, Set<Author> authors) {
+    public Book(String title, Publisher publisher, Set<Author> authors) {
         this.title = title;
         this.publisher = publisher;
         this.authors = authors;
@@ -50,11 +52,11 @@ public class Book {
         this.title = title;
     }
 
-    public String getPublisher() {
+    public Publisher getPublisher() {
         return publisher;
     }
 
-    public void setPublisher(String publisher) {
+    public void setPublisher(Publisher publisher) {
         this.publisher = publisher;
     }
 

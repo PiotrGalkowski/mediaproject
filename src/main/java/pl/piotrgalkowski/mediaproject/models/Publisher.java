@@ -1,4 +1,4 @@
-package guru.springframework.spring5webapp.model;
+package pl.piotrgalkowski.mediaproject.models;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
