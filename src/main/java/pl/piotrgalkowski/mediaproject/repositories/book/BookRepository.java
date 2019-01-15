@@ -1,7 +1,7 @@
-package pl.piotrgalkowski.mediaproject.repositories;
+package pl.piotrgalkowski.mediaproject.repositories.book;
 
 import org.springframework.data.repository.CrudRepository;
-import pl.piotrgalkowski.mediaproject.models.Book;
+import pl.piotrgalkowski.mediaproject.models.book.Book;
 
 /**
  * Created by jt on 5/16/17.

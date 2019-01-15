@@ -3,7 +3,7 @@ package pl.piotrgalkowski.mediaproject.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import pl.piotrgalkowski.mediaproject.repositories.BookRepository;
+import pl.piotrgalkowski.mediaproject.repositories.book.BookRepository;
 
 @Controller
 public class BookController {

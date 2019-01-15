@@ -1,4 +1,4 @@
-package pl.piotrgalkowski.mediaproject.models;
+package pl.piotrgalkowski.mediaproject.models.book;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
