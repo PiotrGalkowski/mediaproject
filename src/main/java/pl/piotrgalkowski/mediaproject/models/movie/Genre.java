@@ -1,12 +1,12 @@
 package pl.piotrgalkowski.mediaproject.models.movie;
 
-import javax.persistence.*;
+public enum Genre {
 
-@Entity
-public class Genre {
+    HORROR("Horror"), SCI_FI("Sci-Fi"), ROMANCE("Romans"), ACTION("Akcja");
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
     private String name;
+
+    Genre(String name) {
+        this.name = name;
+    }
 }
