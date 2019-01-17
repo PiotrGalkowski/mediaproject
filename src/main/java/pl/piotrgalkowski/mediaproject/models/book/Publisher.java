@@ -14,6 +14,10 @@ public class Publisher {
     private String name;
     private String city;
 
+    public Publisher(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
