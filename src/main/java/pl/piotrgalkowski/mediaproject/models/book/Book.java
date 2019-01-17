@@ -13,7 +13,7 @@ public class Book {
     private Long id;
     private String title;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private Publisher publisher;
 
     @ManyToMany
