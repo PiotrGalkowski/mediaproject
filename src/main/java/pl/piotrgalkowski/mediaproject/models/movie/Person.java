@@ -23,20 +23,20 @@ public class Person {
     private Set<Image> images;
 
     @OneToMany
-    @JoinTable(name = "personList_director",
-            joinColumns = @JoinColumn(name = "personList_id"),
-            inverseJoinColumns = @JoinColumn(name = "director_id"))
+//    @JoinTable(name = "personList_director",
+//            joinColumns = @JoinColumn(name = "personList_id"),
+//            inverseJoinColumns = @JoinColumn(name = "director_id"))
     private Set<Director> directors;
 
     @OneToMany
-    @JoinTable(name = "personList_screenwriter",
-            joinColumns = @JoinColumn(name = "personList_id"),
-            inverseJoinColumns = @JoinColumn(name = "screenwriter_id"))
+//    @JoinTable(name = "personList_screenwriter",
+//            joinColumns = @JoinColumn(name = "personList_id"),
+//            inverseJoinColumns = @JoinColumn(name = "screenwriter_id"))
     private Set<ScreenWriter> screenWriters;
 
     @OneToMany
-    @JoinTable(name = "personList_screenwriter",
-            joinColumns = @JoinColumn(name = "personList_id"),
-            inverseJoinColumns = @JoinColumn(name = "actor_id"))
+//    @JoinTable(name = "personList_screenwriter",
+//            joinColumns = @JoinColumn(name = "personList_id"),
+//            inverseJoinColumns = @JoinColumn(name = "actor_id"))
     private Set<Actor> cast;
 }

@@ -1,6 +1,5 @@
 package pl.piotrgalkowski.mediaproject.models.movie;
 
-import pl.piotrgalkowski.mediaproject.models.Rating;
 import pl.piotrgalkowski.mediaproject.models.Status;
 import pl.piotrgalkowski.mediaproject.models.Trailer;
 
@@ -16,6 +15,7 @@ public class Movie {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    @OneToOne
     private Title title;
     private int year;
 
@@ -34,18 +34,18 @@ public class Movie {
             inverseJoinColumns = @JoinColumn(name = "trailer_id"))
     private Set<Trailer> trailerUrls;
 
-    @OneToMany
     @ElementCollection
     private Set<String> imageSources;
 
-    @OneToMany
+    @ManyToMany
     @Enumerated(EnumType.STRING)
     @JoinTable(name = "movie_genre",
             joinColumns = @JoinColumn(name = "movie_id"),
             inverseJoinColumns = @JoinColumn(name = "genre_id"))
     private Set<Genre> genres;
 
-    private Rating rating;
+    @OneToOne
+    private MovieRating rating;
 
     @ManyToMany
     private List<Person> personList;

@@ -1,22 +1,41 @@
 package pl.piotrgalkowski.mediaproject.models.movie;
 
-import pl.piotrgalkowski.mediaproject.models.Rating;
-
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
-public class MovieRating extends Rating {
+@Entity
+public class MovieRating {
 
-    private BigDecimal imdb;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+    private BigDecimal imdbRating;
+    private BigDecimal myRating;
 
-    public MovieRating(BigDecimal imdb) {
-        this.imdb = imdb;
+    public Long getId() {
+        return id;
     }
 
-    public BigDecimal getImdb() {
-        return imdb;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public void setImdb(BigDecimal imdb) {
-        this.imdb = imdb;
+    public BigDecimal getImdbRating() {
+        return imdbRating;
+    }
+
+    public void setImdbRating(BigDecimal imdbRating) {
+        this.imdbRating = imdbRating;
+    }
+
+    public BigDecimal getMyRating() {
+        return myRating;
+    }
+
+    public void setMyRating(BigDecimal myRating) {
+        this.myRating = myRating;
     }
 }
